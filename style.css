@@ -1,4 +1,4 @@
-:root {
+    :root {
     --hero_footer: #1F2937;
     --header_link: #e5e7eb;
     --header_logo: #f9faf8;
@@ -7,6 +7,7 @@
     --quote_background: #e5e7eb;
     --quote_font: italic light 36px;
     --quote_color: #1f2937;
+    --border: 8px;
 }
 
 body {
@@ -99,7 +100,7 @@ button {
     color: var(--header_logo);
     padding: 0.5rem 1.5rem;
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border);
     cursor: pointer;
     max-width: 100px;
 }
@@ -142,21 +143,72 @@ button {
 
 .quote-container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: var(--quote_background);
-    padding: 2rem;
+    padding: 4rem;
 }
 
 .quote {
+    text-align: left;
     font-size: 36px;
     font-style: italic;
     font-weight: lighter;
     color: var(--quote_color);
+    max-width: 750px;
 }
 
 .signature {
+    display: block;
+    text-align: left;
+    color: var(--quote_color); 
+    font-weight: bold;
+    font-size: 24px;
+    max-width: 750px;
+    position: relative;
+    right: -220px;
+}
+
+.cta {
     display: flex;
-    text-align: right;
+    justify-content: center;
+    padding: 3rem;
+}
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    background-color: var(--button);
+    padding: 2rem 4rem;
+    border-radius: var(--border);
+}
+
+.cta-button {
+    border: solid 2px var(--header_logo);
+    border-radius: var(--border);
+    max-height: fit-content;
+    position: relative;
+    bottom: -5px;
+    min-width: 100px;
+}
+
+.cta-text{
+    justify-content: center;
+    color: white;
+    background-color: var(--button);
+}
+
+.cta-text-cta {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--hero_footer);
+    color: var(--header_link);
+    font-size: 18px;
 }
