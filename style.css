@@ -11,21 +11,22 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    aspect-ratio: 16 / 9;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .header, .hero {
+    display: flex;
     background-color: var(--hero_footer);
-
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
 }
+
 
 .header {
     display: flex;
     justify-content: space-around;
-    min-width: 80%;
+
 }
 
 ul {
@@ -51,48 +52,45 @@ a {
 
 .hero {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 48px;
     flex: 1 0 300px;
-    min-width: 300px;
-    max-height: 40vh;
+    max-height: fit-content;
+    flex-wrap: wrap;
 }
 
 .hero-left {
-    display: flex;
-    flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    max-width: 500px;
-    padding-left: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
 #awesome {
     color: var(--header_logo);
     font-size: 48px;
     font-weight: 600;
-    max-width: 80%;
 }
 
 #placeholder-subtext {
     color: var(--header_link);
     font-size: 18px;
     opacity: 0.7;
-    max-width: 70%;
 }
 
 .hero-right {
     padding-top: 2rem;
     display: flex;
-    justify-content: left;
-    max-width: 50%;
+    justify-content: center;
+    width: 100%;
     flex: 1 0 300px;
     min-width: 300px;
 }
 img {
-    width: 72%;
-    height: 70%;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
+    position: relative;
 }
 
 button {
@@ -155,6 +153,7 @@ button {
     font-style: italic;
     font-weight: lighter;
     color: var(--quote_color);
+    width: 90%; 
     max-width: 750px;
 }
 
@@ -164,6 +163,7 @@ button {
     color: var(--quote_color); 
     font-weight: bold;
     font-size: 24px;
+    width: 100%; 
     max-width: 750px;
     position: relative;
     right: -220px;
@@ -177,7 +177,8 @@ button {
 .cta-container {
     display: flex;
     justify-content: center;
-    gap: 10rem;
+    flex-wrap: wrap;
+    gap: 2rem;
     background-color: var(--button);
     padding: 2rem 4rem;
     border-radius: var(--border);
